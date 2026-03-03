@@ -42,6 +42,11 @@ next-env.d.ts
 
 /media
 
+# SQLite database file (datos de produccion, no debe estar en el repo)
+payload.db
+*.db-shm
+*.db-wal
+
 # Playwright
 node_modules/
 /test-results/

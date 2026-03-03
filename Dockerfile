@@ -55,6 +55,10 @@ COPY --from=builder /app/public ./public
 RUN mkdir .next
 RUN chown nextjs:nodejs .next
 
+# Create directories for SQLite database and media uploads
+RUN mkdir -p /app/data /app/public/media
+RUN chown -R nextjs:nodejs /app/data /app/public/media
+
 # Automatically leverage output traces to reduce image size
 # https://nextjs.org/docs/advanced-features/output-file-tracing
 COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
