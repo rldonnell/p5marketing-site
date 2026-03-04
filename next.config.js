@@ -8,8 +8,6 @@ const nextConfig = {
       },
     ],
   },
-  // Enable ISR and static generation for Vercel
-  output: undefined, // Let Vercel handle this automatically
 };
 
 module.exports = nextConfig;
