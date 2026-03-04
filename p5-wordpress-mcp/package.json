@@ -1,0 +1,24 @@
+{
+  "name": "p5-wordpress-mcp",
+  "version": "1.0.0",
+  "description": "MCP server connecting Claude to P5 Marketing's headless WordPress",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "p5-wordpress-mcp": "dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx src/index.ts",
+    "start": "node dist/index.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "zod": "^3.22.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.0",
+    "tsx": "^4.7.0",
+    "@types/node": "^20.0.0"
+  }
+}
