@@ -1,4 +1,4 @@
-import type { Field } from 'payload'
+import type { CollectionSlug, Field } from 'payload'
 
 // Content Fields - Para articles, posts, etc.
 export const contentFields: Field[] = [
@@ -22,7 +22,7 @@ export const contentFields: Field[] = [
 ]
 
 // Category Field - Para clasificar contenido
-export const categoryField = (relationTo: string = 'categories'): Field => ({
+export const categoryField = (relationTo: CollectionSlug = 'categories' as CollectionSlug): Field => ({
   name: 'category',
   type: 'relationship',
   relationTo: relationTo,
